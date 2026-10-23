@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Personal - Carcajadas & Publicity Textil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f6f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+    .header-banner {
+      background: linear-gradient(135deg, #0d52cd 0%, #17387a 100%);
+      color: white;
+      padding: 25px 30px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    .logo-container {
+      background-color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .logo-img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+    }
+    .logo-divider {
+      width: 1px;
+      height: 35px;
+      background-color: #d1d5db;
+    }
+    .header-title-box h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .header-title-box p {
+      margin: 4px 0 0 0;
+      font-size: 0.95rem;
+      color: #dbeafe;
+      font-weight: 400;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 25px;
+    }
+    .card-header {
+      background-color: #ffffff;
+      border-bottom: 2px solid #e9ecef;
+      padding: 15px 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #0d52cd;
+      border-radius: 12px 12px 0 0 !important;
+    }
+    .card-subtitle-custom {
+      font-size: 0.9rem;
+      color: #6c757d;
+      font-weight: normal;
+      margin-top: 4px;
+    }
+    .instruction-box {
+      background-color: #eff6ff;
+      border-left: 4px solid #0d52cd;
+      padding: 18px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 25px;
+    }
+    .instruction-box ul {
+      margin-bottom: 0;
+      padding-left: 20px;
+    }
+    .question-row {
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .question-row:last-child {
+      border-bottom: none;
+    }
+    .form-check-input:checked {
+      background-color: #0d52cd;
+      border-color: #0d52cd;
+    }
+    .btn-submit {
+      background: linear-gradient(135deg, #0d52cd 0%, #17387a 100%);
+      color: white;
+      font-weight: bold;
+      padding: 14px 36px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(13, 82, 205, 0.3);
+      transition: all 0.3s ease;
+    }
+    .btn-submit:hover {
+      background: linear-gradient(135deg, #17387a 0%, #0d52cd 100%);
+      color: white;
+      transform: translateY(-2px);
+    }
+    .footer-text {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      color: #6c757d;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 768px) {
+      .header-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo-container {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-4" style="max-width: 920px;">
+
+  <!-- ENCABEZADO OFICIAL -->
+  <div class="header-banner">
+    <div class="logo-container">
+      <img src="https://storage.googleapis.com/evaluacion-carcajadas/index_1_6.html" alt="Carcajadas" class="logo-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/100x40?text=Carcajadas';">
+      <div class="logo-divider"></div>
+      <svg class="logo-img" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#172b4d"/>
+        <path d="M18 10C13.5817 10 10 13.5817 10 18V26H16V20H20V26H26V18C26 13.5817 22.4183 10 18 10Z" fill="white"/>
+        <circle cx="15" cy="16" r="1.5" fill="#172b4d"/>
+        <circle cx="21" cy="16" r="1.5" fill="#172b4d"/>
+        <text x="42" y="22" font-family="Arial, sans-serif" font-weight="900" font-size="13" fill="#172b4d">PUBLI</text>
+        <text x="42" y="33" font-family="Arial, sans-serif" font-weight="900" font-size="13" fill="#172b4d">CITY</text>
+      </svg>
+    </div>
+    <div class="header-title-box">
+      <h1>EVALUACIÓN DE PERSONAL</h1>
+      <p>Departamento de Gestión Humana · Formato de evaluación de desempeño</p>
+    </div>
+  </div>
+
+  <form id="evaluationForm">
+
+    <!-- DATOS GENERALES -->
+    <div class="card">
+      <div class="card-header">Datos de la Evaluación</div>
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Nombre del evaluado:</label>
+            <input type="text" class="form-control" name="nombre" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Cargo:</label>
+            <input type="text" class="form-control" name="cargo" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Período:</label>
+            <input type="text" class="form-control" name="periodo" placeholder="Ej: Q1 / Ene-Mar" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Fecha:</label>
+            <input type="date" class="form-control" name="fecha" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Evaluador:</label>
+            <input type="text" class="form-control" name="evaluador" required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSTRUCCIONES -->
+    <div class="instruction-box">
+      <h6 class="fw-bold mb-2">Antes de empezar, ten en cuenta lo siguiente:</h6>
+      <ul>
+        <li>Esta evaluación se basa en comportamientos reales, no en percepciones generales.</li>
+        <li>Responde pensando en situaciones concretas de los últimos meses.</li>
+        <li>Si tienes dudas entre dos opciones, elige la opción más exigente.</li>
+        <li>No evalúes intención, evalúa lo que realmente pasó.</li>
+        <li>Sé honesto: esta evaluación es para tomar decisiones, no para quedar bien.</li>
+      </ul>
+    </div>
+
+    <!-- SECCIÓN 1: CARÁCTER -->
+    <div class="card">
+      <div class="card-header">
+        1. Carácter
+        <div class="card-subtitle-custom">Responde de forma espontánea, si tienes dudas entonces la respuesta es NO.</div>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr>
+                <th>Pregunta</th>
+                <th class="text-center" style="width: 80px;">SÍ</th>
+                <th class="text-center" style="width: 80px;">NO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>En el día a día ¿Su presencia suma energía positiva al equipo?</td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_1" value="Si" required></td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_1" value="No"></td>
+              </tr>
+              <tr>
+                <td>En el trabajo con otros ¿Es una persona con la que es fácil colaborar?</td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_2" value="Si" required></td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_2" value="No"></td>
+              </tr>
+              <tr>
+                <td>Cuando enfrenta algo nuevo ¿Aprende rápido?</td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_3" value="Si" required></td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_3" value="No"></td>
+              </tr>
+              <tr>
+                <td>En su trabajo ¿Hace que las cosas pasen?</td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_4" value="Si" required></td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_4" value="No"></td>
+              </tr>
+              <tr>
+                <td>En su forma de actuar ¿Es transparente?</td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_5" value="Si" required></td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_5" value="No"></td>
+              </tr>
+              <tr>
+                <td>Cuando se comunica ¿Es claro y directo?</td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_6" value="Si" required></td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_6" value="No"></td>
+              </tr>
+              <tr>
+                <td>Cuando recibe críticas ¿Responde bien?</td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_7" value="Si" required></td>
+                <td class="text-center"><input class="form-check-input" type="radio" name="caracter_7" value="No"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 2: RESULTADOS -->
+    <div class="card">
+      <div class="card-header">
+        2. Resultados
+        <div class="card-subtitle-custom">Esta dimensión trata de evaluar si la persona cumple o no los objetivos en términos de alcance, tiempo y calidad. (Nota: Aquí NO evaluamos el CÓMO los logró).</div>
+      </div>
+      <div class="card-body">
+        <div class="question-row">
+          <p class="fw-bold mb-2">1. En los últimos 3 meses, En la mayoría de tareas que se le asignaron ¿Logró lo que se esperaba de su rol?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="resultados_1" id="res_1_a" value="La mayoría de las veces" required>
+            <label class="form-check-label" for="res_1_a">La mayoría de las veces</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="resultados_1" id="res_1_b" value="Pocas veces">
+            <label class="form-check-label" for="res_1_b">Pocas veces</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">2. En los últimos 3 meses, En la mayoría de tareas que se le asignaron ¿Qué tan cumplido fue en los tiempos de entrega?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="resultados_2" id="res_2_a" value="Muy cumplido" required>
+            <label class="form-check-label" for="res_2_a">Muy cumplido</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="resultados_2" id="res_2_b" value="Poco cumplido">
+            <label class="form-check-label" for="res_2_b">Poco cumplido</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">3. En los últimos 3 meses, En la mayoría de tareas que se le asignaron ¿El resultado que entregó era de la calidad que esperabas?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="resultados_3" id="res_3_a" value="La mayoría de las veces" required>
+            <label class="form-check-label" for="res_3_a">La mayoría de las veces</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="resultados_3" id="res_3_b" value="Pocas veces">
+            <label class="form-check-label" for="res_3_b">Pocas veces</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 3: EJECUCIÓN -->
+    <div class="card">
+      <div class="card-header">
+        3. Ejecución
+        <div class="card-subtitle-custom">Esta dimensión evalúa cómo trabaja en el día a día en: orden, autonomía y consistencia.</div>
+      </div>
+      <div class="card-body">
+        <div class="question-row">
+          <p class="fw-bold mb-2">1. En el día a día, cuando tiene varias tareas al mismo tiempo, ¿Logra organizarse y avanzar sin perder el control?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="ejecucion_1" id="eje_1_a" value="La mayoría de las veces" required>
+            <label class="form-check-label" for="eje_1_a">La mayoría de las veces</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="ejecucion_1" id="eje_1_b" value="Pocas veces">
+            <label class="form-check-label" for="eje_1_b">Pocas veces</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">2. Cuando se le asigna una tarea y no haces seguimiento, ¿Avanza por su cuenta hasta completarla?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="ejecucion_2" id="eje_2_a" value="La mayoría de las veces" required>
+            <label class="form-check-label" for="eje_2_a">La mayoría de las veces</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="ejecucion_2" id="eje_2_b" value="Pocas veces">
+            <label class="form-check-label" for="eje_2_b">Pocas veces</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">3. En su trabajo diario, ¿Mantiene un ritmo constante?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="ejecucion_3" id="eje_3_a" value="La mayoría de las veces mantiene el ritmo" required>
+            <label class="form-check-label" for="eje_3_a">La mayoría de las veces mantiene el ritmo</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="ejecucion_3" id="eje_3_b" value="Pocas veces lo mantiene">
+            <label class="form-check-label" for="eje_3_b">Pocas veces lo mantiene</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 4: CULTURA -->
+    <div class="card">
+      <div class="card-header">
+        4. Cultura
+        <div class="card-subtitle-custom">Esta dimensión evalúa cómo impacta al equipo en: relación, conflicto y actitud.</div>
+      </div>
+      <div class="card-body">
+        <div class="question-row">
+          <p class="fw-bold mb-2">1. En su interacción diaria con el equipo ¿Genera una relación fluida y colaborativa?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="cultura_1" id="cul_1_a" value="La mayoría de las veces" required>
+            <label class="form-check-label" for="cul_1_a">La mayoría de las veces</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="cultura_1" id="cul_1_b" value="Pocas veces">
+            <label class="form-check-label" for="cul_1_b">Pocas veces</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">2. Cuando hay desacuerdos o tensiones ¿Contribuye a resolverlos?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="cultura_2" id="cul_2_a" value="La mayoría de las veces ayuda a resolver" required>
+            <label class="form-check-label" for="cul_2_a">La mayoría de las veces ayuda a resolver</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="cultura_2" id="cul_2_b" value="Pocas veces lo hace">
+            <label class="form-check-label" for="cul_2_b">Pocas veces lo hace</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">3. En el día a día ¿Su actitud aporta al equipo?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="cultura_3" id="cul_3_a" value="La mayoría de las veces aporta" required>
+            <label class="form-check-label" for="cul_3_a">La mayoría de las veces aporta</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="cultura_3" id="cul_3_b" value="Pocas veces aporta">
+            <label class="form-check-label" for="cul_3_b">Pocas veces aporta</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 5: CRECIMIENTO -->
+    <div class="card">
+      <div class="card-header">
+        5. Crecimiento
+        <div class="card-subtitle-custom">Esta dimensión evalúa su evolución en: aprendizaje, responsabilidad y adaptación.</div>
+      </div>
+      <div class="card-body">
+        <div class="question-row">
+          <p class="fw-bold mb-2">1. En los últimos meses ¿Ha mejorado en su capacidad o forma de trabajar?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="crecimiento_1" id="cre_1_a" value="La mayoría de las veces se ve mejora" required>
+            <label class="form-check-label" for="cre_1_a">La mayoría de las veces se ve mejora</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="crecimiento_1" id="cre_1_b" value="Pocas veces se ve mejora">
+            <label class="form-check-label" for="cre_1_b">Pocas veces se ve mejora</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">2. Cuando tiene oportunidad de asumir más responsabilidad ¿Lo hace?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="crecimiento_2" id="cre_2_a" value="La mayoría de las veces asume más" required>
+            <label class="form-check-label" for="cre_2_a">La mayoría de las veces asume más</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="crecimiento_2" id="cre_2_b" value="Pocas veces lo hace">
+            <label class="form-check-label" for="cre_2_b">Pocas veces lo hace</label>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p class="fw-bold mb-2">3. Cuando cambian las condiciones o aparecen retos nuevos ¿Logra adaptarse y responder?</p>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="crecimiento_3" id="cre_3_a" value="La mayoría de las veces se adapta" required>
+            <label class="form-check-label" for="cre_3_a">La mayoría de las veces se adapta</label>
+          </div>
+          <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="crecimiento_3" id="cre_3_b" value="Pocas veces lo logra">
+            <label class="form-check-label" for="cre_3_b">Pocas veces lo logra</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 6: FEEDBACK ESPECÍFICO -->
+    <div class="card">
+      <div class="card-header">Retroalimentación Directa</div>
+      <div class="card-body">
+        <p class="fw-bold mb-3">¿Qué es exactamente lo que esta persona está haciendo que no te gusta o no suma a su rol y qué es exactamente lo que quieres que SÍ haga en su lugar?</p>
+        
+        <div class="mb-3">
+          <label class="form-label fw-bold text-danger">No hagas más esto por favor...</label>
+          <textarea class="form-control" name="no_hagas_mas" rows="3" placeholder="Escribe aquí las acciones a detener..." required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-bold text-success">En su lugar quiero que hagas esto...</label>
+          <textarea class="form-control" name="en_su_lugar" rows="3" placeholder="Escribe aquí los comportamientos esperados..." required></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 7: BALANCE Y DECISIÓN FINAL -->
+    <div class="card">
+      <div class="card-header">Balance y Decisión Final</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label fw-bold">1. ¿Qué fue lo que NO hizo bien esta persona en este período?</label>
+          <textarea class="form-control" name="no_hizo_bien" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-bold">2. ¿Qué SÍ hizo muy bien esta persona en este período?</label>
+          <textarea class="form-control" name="si_hizo_bien" rows="3" required></textarea>
+        </div>
+
+        <hr class="my-4">
+
+        <p class="fw-bold mb-2">Selecciona solo una de las decisiones y explica por qué la seleccionaste, argumenta bien tu respuesta:</p>
+        
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="decision_final" id="dec_1" value="Puede ser promocionado a un ascenso" required>
+          <label class="form-check-label" for="dec_1">1. Puede ser promocionado a un ascenso</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="decision_final" id="dec_2" value="Continúa trabajando con nosotros">
+          <label class="form-check-label" for="dec_2">2. Continúa trabajando con nosotros</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="decision_final" id="dec_3" value="Continúa trabajando, pero bajo observación">
+          <label class="form-check-label" for="dec_3">3. Continúa trabajando, pero bajo observación</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="decision_final" id="dec_4" value="No continúa trabajando con nosotros">
+          <label class="form-check-label" for="dec_4">4. No continúa trabajando con nosotros</label>
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label fw-bold">¿Por qué tomaste esa decisión?</label>
+          <textarea class="form-control" name="argumento_decision" rows="4" placeholder="Argumenta bien tu respuesta..." required></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÓN DE ENVÍO -->
+    <div class="text-center my-4">
+      <button type="submit" class="btn btn-submit btn-lg">Guardar y Enviar Evaluación</button>
+    </div>
+
+  </form>
+
+  <div class="footer-text">
+    Departamento de Gestión Humana · Todos los Derechos Reservados
+  </div>
+
+</div>
+
+<script>
+  document.getElementById('evaluationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('¡Evaluación guardada exitosamente!');
+  });
+</script>
+</body>
+</html>
